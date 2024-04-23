@@ -5,34 +5,30 @@
 //
 let sort = [7, 6, 1, 5, 4];
 let temp = 0;
-
 for (let i = 0; i < sort.length; i++) {
   for (let j = 0; j < sort.length; j++) {
-    if (sort[i] < sort[j]) {
-      console.log('i : ', i);
-      console.log('j : ', j);
-      temp = sort[i];
-      sort[i] = sort[j];
-      sort[j] = temp;
+    console.log(sort);
+    if (sort[j] > sort[j + 1]) {
+      temp = sort[j];
+      sort[j] = sort[j + 1];
+      sort[j + 1] = temp;
     }
   }
-  console.log(sort);
 }
 
 /*
-5, 7, 2, 8, 9, 3, 4, 1, 6
+for (let i = 0; i < sort.length; i++) {
+  for (let j = 0; j < sort.length; j++) {
+    if (sort[j] > sort[j + 1]) {
+      temp = sort[j];
+      sort[j] = sort[j + 1];
+      sort[j + 1] = temp;
+    }
+    console.log(sort);
+  }
+}
 
-5, 2, 7, 8, 9, 3, 4, 1, 6
-
-5, 7, 2, 8, 9, 3, 4, 1, 6
-
-5, 7, 2, 8, 9, 3, 4, 1, 6
-
-5, 7, 2, 8, 3, 9, 4, 1, 6
-
-5, 7, 2, 8, 3, 4, 9, 1, 6
-
-5, 7, 2, 8, 3, 4, 1, 9, 6
-
-5, 7, 2, 8, 3, 4, 1, 6, 9
+[1, 6, 5, 4, 7]
+j : 1
+j + 1 : 2
 */
